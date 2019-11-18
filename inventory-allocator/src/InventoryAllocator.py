@@ -5,6 +5,9 @@ Order = Dict[str, int]
 
 
 class InventoryAllocator:
+    """
+    InventoryAllocator allow us to find the cheapest shipment for a order among all the inventory distribution
+    """
     def __init__(self, order: Order, warehouses: List[dict]):
         self.order = self.filter_order(order)
         self.inventory_distribution, self.total_inventory = self.compute_inventory(warehouses)
